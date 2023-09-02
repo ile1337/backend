@@ -21,3 +21,20 @@ jobs:
         run: |
           docker build -t ile1337/backend ./backend
           docker push ile1337/backend
+  deploy:
+        needs: build
+        runs-on:
+            - self-hosted
+            - label-1
+        steps:
+            - uses: actions/checkout@v2
+            
+            - name: Run scripts
+              run: |
+                cd ../backend
+                git pull origin kube
+                git checkout kube
+                cd kube
+                helm upgrade --install database-chart database-chart
+                helm upgrade --install backend-chart backend-chart
+                kubectl rollout restart deployment backenddeployment

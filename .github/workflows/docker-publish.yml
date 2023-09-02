@@ -3,7 +3,7 @@ name: docker-build-and-push
 on:
   push:
     branches:
-      - 'master'
+      - 'kube'
 
 jobs:
   build:
@@ -20,4 +20,4 @@ jobs:
         name: Build and push
         run: |
           docker build -t ile1337/backend ./backend
-          docker push ile1337/backend
+          docker push ile1337/backend-kube

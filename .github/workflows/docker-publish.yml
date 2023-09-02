@@ -19,5 +19,5 @@ jobs:
       -
         name: Build and push
         run: |
-          docker build -t ile1337/backend ./backend
+          docker build -t ile1337/backend-kube ./backend
           docker push ile1337/backend-kube

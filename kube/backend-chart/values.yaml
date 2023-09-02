@@ -2,7 +2,7 @@ backend:
   name: backend
   serviceName: backendservice
   deploymentName: backenddeployment
-  image: ile1337/backend
+  image: ile1337/backend-kube
   tag: latest
   restartPolicy: Always
   port: 8080

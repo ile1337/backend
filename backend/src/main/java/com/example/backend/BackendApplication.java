@@ -26,6 +26,7 @@ public class BackendApplication {
         repo.save(new Switch(Long.parseLong("1"),"cherry mx black",89));
         repo.save(new Switch(Long.parseLong("2"),"cherry mx blue",60));
         repo.save(new Switch(Long.parseLong("3"),"Razer Green Switch",50));
+        repo.save(new Switch(Long.parseLong("4"),"cherry mx clear",50));
 
         return repo.save(new Switch(Long.parseLong("4"),"Alps SKCL Yellow",50));
     }
